@@ -12,7 +12,6 @@ public class item {
 		setItemType(itemType);
 		setItemName(itemName);
 		setItemPrice(itemPrice);
-		System.out.println(this.itemPrice);
 		setItemNum(itemNum);
 		setItemDescrip(itemDescrip);
 		
