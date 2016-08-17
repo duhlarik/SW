@@ -68,13 +68,13 @@ public class Catalog {
 	public static double placeOrder2(ArrayList<item> itemsList, Scanner scan1, String itemNum) {
 		double price = 0.0;
 
-		for (int j = 0; j < itemsList.size(); j++) {
+		for (item Item: itemsList) {
 
-			if (itemNum.equalsIgnoreCase(itemsList.get(j).getItemNum())) {
+			if (itemNum.equalsIgnoreCase(Item.getItemNum())) {
 
-				System.out.println(itemsList.get(j).getItemPrice());
+				System.out.println(Item.getItemPrice());
 
-				price = (itemsList.get(j).getItemPrice());
+//				price = (itemsList.get(j).getItemPrice());
 			}
 		}
 		System.out.println("How many? Enter quantity.");
