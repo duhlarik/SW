@@ -17,6 +17,10 @@ public class item {
 		
 	}
 
+	public item(String itemType2, String itemName2, String string, String itemNum2, String itemDescrip2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getItemType() {
 		return itemType;
 	}
