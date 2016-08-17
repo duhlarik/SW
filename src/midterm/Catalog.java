@@ -1,5 +1,6 @@
 package midterm;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -51,18 +52,18 @@ public class Catalog {
 			}
 		}
 
-		placeOrder2(itemsList, scan1, input);
 	}
 
 	public static double placeOrder2(ArrayList<item> itemsList, Scanner scan1, String itemNum) {
 		double price = 0;
+		DecimalFormat df = new DecimalFormat ("#.00");
 
 		System.out.println("What would you like to order? Enter item number.");
 
 		itemNum = scan1.nextLine();
 
 		for (int j = 0; j < itemsList.size(); j++) {
-			if (itemNum.equalsIgnoreCase(itemsList.get(j).getItemType())) {
+			if (itemNum.equalsIgnoreCase(itemsList.get(j).getItemNum())) {
 
 				price = itemsList.get(j).getItemPrice();
 				
@@ -78,7 +79,7 @@ public class Catalog {
 
 		double extendedPrice = quantity * price;
 
-		System.out.println("Your subtotal is: " + extendedPrice);
+		System.out.println("Your subtotal is $" + df.format(extendedPrice));
 
 		subTotal += extendedPrice;
 

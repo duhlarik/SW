@@ -1,5 +1,6 @@
 package midterm;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Checkout {
@@ -80,11 +81,17 @@ public class Checkout {
 
 	public int getCvv() {
 		return cvv;
-	}
+ 	}
 
 	public void paymentInfo() {
 		
-		System.out.println("$" + grandTotal);
+		DecimalFormat df = new DecimalFormat ("#.00");
+		double tax = 0.06;
+		Catalog sTotal = new Catalog();
+		double totalTax = sTotal.getSubTotal() * tax;
+		double grandTotal = totalTax + sTotal.getSubTotal();
+		System.out.println("Tax due: $" + df.format(totalTax));
+		System.out.println("Your total is $" + df.format(grandTotal));
 		System.out.println("How do you want to pay? (check/cash/charge)");
 		Scanner scan1 = new Scanner(System.in);
 		String payType = scan1.nextLine();
@@ -94,7 +101,7 @@ public class Checkout {
 			System.out.println("Cash tendered? ");
 			cashTendered = scan1.nextDouble();
 			cashChange = cashTendered - grandTotal;
-			System.out.println("Your change is " + cashChange);
+			System.out.println("Your change is $" + df.format(cashChange));
 		}
 
 		else if (payType.equalsIgnoreCase("check")) {
