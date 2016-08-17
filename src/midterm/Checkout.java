@@ -1,7 +1,9 @@
 package midterm;
 
+import java.util.Scanner;
+
 public class Checkout {
-	
+
 	private double tax;
 	private double grandTotal;
 	private String payType;
@@ -80,8 +82,50 @@ public class Checkout {
 		return cvv;
 	}
 
-	public void setCvv(int cvv) {
-		this.cvv = cvv;
+	public void paymentInfo() {
+		
+		System.out.println("$" + grandTotal);
+		System.out.println("How do you want to pay? (check/cash/charge)");
+		Scanner scan1 = new Scanner(System.in);
+		String payType = scan1.nextLine();
+
+		if (payType.equalsIgnoreCase("cash")) {
+			// cash(grandTotal);
+			System.out.println("Cash tendered? ");
+			cashTendered = scan1.nextDouble();
+			cashChange = cashTendered - grandTotal;
+			System.out.println("Your change is " + cashChange);
+		}
+
+		else if (payType.equalsIgnoreCase("check")) {
+			System.out.println("Please enter check number: ");
+			checkNum = scan1.nextInt();
+			System.out.println("Thank you for check number " + checkNum);
+		}
+
+		else if (payType.equalsIgnoreCase("charge")) {
+			System.out.println("Please enter your CC number: ");
+			ccNum = scan1.next();
+			System.out.println("Please enter the expiration date: ");
+			expDate = scan1.next();
+		}
+
+	}
+
+	public double figureTax(double subTotal) {
+		double tax = 0.06;
+		double grandTotal = subTotal * tax;
+		return grandTotal;
+
+	}
+
+	public double cash(double grandTotal) {
+		//not being called
+		Scanner scan1 = new Scanner(System.in);
+		System.out.println("Cash tendered? ");
+		cashTendered = scan1.nextDouble();
+		cashChange = cashTendered - grandTotal;
+		return cashChange;
 	}
 
 }
