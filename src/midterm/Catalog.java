@@ -25,7 +25,6 @@ public class Catalog {
 		this.subTotal = subTotal;
 	}
 
-	
 	public static void printItemsList(ArrayList<item> itemsList) {
 
 		Scanner scan1 = new Scanner(System.in);
@@ -53,6 +52,7 @@ public class Catalog {
 		}
 
 		placeOrder1(scan1);
+		placeOrder2(itemsList, scan1, input);
 
 	}
 
@@ -66,15 +66,16 @@ public class Catalog {
 	}
 
 	public static double placeOrder2(ArrayList<item> itemsList, Scanner scan1, String itemNum) {
-		double price = 0.0;
-
-		for (item Item: itemsList) {
+//		double price = itemsList.indexOf(3);
+//		double price = CreateArray.addItemsList(null);
+		double price = 0;
+		for (item Item : itemsList) {
 
 			if (itemNum.equalsIgnoreCase(Item.getItemNum())) {
 
 				System.out.println(Item.getItemPrice());
-
-//				price = (itemsList.get(j).getItemPrice());
+//				System.out.println(itemsList.get(3));
+				price = (Item.getItemPrice());
 			}
 		}
 		System.out.println("How many? Enter quantity.");
@@ -86,9 +87,9 @@ public class Catalog {
 		double extendedPrice = quantity * price;
 
 		System.out.println("Your subtotal is: " + extendedPrice);
-		
+
 		subTotal += extendedPrice;
-		
+
 		return subTotal;
 	}
 }
