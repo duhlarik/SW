@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Catalog {
 
 	private static int quantity;
-	private static double subTotal = 0.0;
+	private static double subTotal;
 	public static String ItemNum;
 
 	public int getQuantity() {
@@ -51,33 +51,25 @@ public class Catalog {
 			}
 		}
 
-		placeOrder1(scan1);
 		placeOrder2(itemsList, scan1, input);
-
-	}
-
-	public static String placeOrder1(Scanner scan1) {
-
-		System.out.println("What would you like to order? Enter item number.");
-
-		String itemNum = scan1.nextLine();
-
-		return itemNum;
 	}
 
 	public static double placeOrder2(ArrayList<item> itemsList, Scanner scan1, String itemNum) {
-//		double price = itemsList.indexOf(3);
-//		double price = CreateArray.addItemsList(null);
 		double price = 0;
-		for (item Item : itemsList) {
 
-			if (itemNum.equalsIgnoreCase(Item.getItemNum())) {
+		System.out.println("What would you like to order? Enter item number.");
 
-				System.out.println(Item.getItemPrice());
-//				System.out.println(itemsList.get(3));
-				price = (Item.getItemPrice());
+		itemNum = scan1.nextLine();
+
+		for (int j = 0; j < itemsList.size(); j++) {
+			if (itemNum.equalsIgnoreCase(itemsList.get(j).getItemType())) {
+
+				price = itemsList.get(j).getItemPrice();
+				
+				System.out.print(price); // TEST
 			}
 		}
+
 		System.out.println("How many? Enter quantity.");
 
 		int input2 = scan1.nextInt();

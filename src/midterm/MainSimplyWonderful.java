@@ -16,7 +16,6 @@ public class MainSimplyWonderful {
 		ArrayList<item> itemsList = CreateArray.addItemsList(f);
 		
 /*		for (int j = 0; j < itemsList.size(); j++) {
-			
 
 				System.out.print(itemsList.get(j).getItemType() + ", ");
 				System.out.print(itemsList.get(j).getItemName() + ", ");
@@ -25,10 +24,8 @@ public class MainSimplyWonderful {
 				System.out.print(itemsList.get(j).getItemDescrip());
 
 				System.out.println();
-
 			
 		}*/
-		
 
 		System.out.println("Welcome to Simply Wonderful.");
 
@@ -40,7 +37,7 @@ public class MainSimplyWonderful {
 			
 			Catalog.printItemsList(itemsList);
 			
-			Catalog.placeOrder1(scan1);
+			//Catalog.placeOrder1(scan1);
 			
 			Catalog.placeOrder2(itemsList, scan1, Catalog.ItemNum);
 			
@@ -48,10 +45,8 @@ public class MainSimplyWonderful {
 			
 			choice = scan1.nextLine();
 		}
-		
 		 
 		 scan1.close();
-		 
 
 	}
 }
