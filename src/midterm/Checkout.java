@@ -90,8 +90,12 @@ public class Checkout {
 		Catalog sTotal = new Catalog();
 		double totalTax = sTotal.getSubTotal() * tax;
 		double grandTotal = totalTax + sTotal.getSubTotal();
+		System.out.println("\nSubtotal: $" + sTotal.getSubTotal());
+		System.out.println();
 		System.out.println("Tax due: $" + df.format(totalTax));
-		System.out.println("Your total is $" + df.format(grandTotal));
+		System.out.println();
+		System.out.println("Total due: $" + df.format(grandTotal));
+		System.out.println();
 		System.out.println("How do you want to pay? (check/cash/charge)");
 		Scanner scan1 = new Scanner(System.in);
 		String payType = scan1.nextLine();
@@ -119,7 +123,7 @@ public class Checkout {
 
 	}
 
-	public double figureTax(double subTotal) {
+/*	public double figureTax(double subTotal) {
 		double tax = 0.06;
 		double grandTotal = subTotal * tax;
 		return grandTotal;
@@ -133,6 +137,6 @@ public class Checkout {
 		cashTendered = scan1.nextDouble();
 		cashChange = cashTendered - grandTotal;
 		return cashChange;
-	}
+	}*/
 
 }

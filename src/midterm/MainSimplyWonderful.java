@@ -3,7 +3,6 @@ package midterm;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-//import Catalog;
 
 public class MainSimplyWonderful {
 
@@ -15,43 +14,37 @@ public class MainSimplyWonderful {
 
 		ArrayList<item> itemsList = CreateArray.addItemsList(f);
 
-		/*
-		 * for (int j = 0; j < itemsList.size(); j++) {
-		 * 
-		 * 
-		 * System.out.print(itemsList.get(j).getItemType() + ", ");
-		 * System.out.print(itemsList.get(j).getItemName() + ", ");
-		 * System.out.print(itemsList.get(j).getItemPrice() + ", ");
-		 * System.out.print(itemsList.get(j).getItemNum() + ", ");
-		 * System.out.print(itemsList.get(j).getItemDescrip());
-		 * 
-		 * System.out.println();
-		 * 
-		 * }
-		 */
-
-		System.out.println("Welcome to Simply Wonderful.");
+		System.out.println("Welcome to Simply Wonderful.\n");
 
 		String choice = "yes";
 
 		while (choice.equalsIgnoreCase("yes")) {
 
 			System.out.println("What department would you like to shop in?");
+			
+			String input = scan1.nextLine();
 
-			Catalog.printItemsList(itemsList);
+			while (!(input.equalsIgnoreCase("shoes") || input.equalsIgnoreCase("clothes")
+					|| input.equalsIgnoreCase("hair care"))) {
+				System.out.println("That's not a valid department. Please enter \"shoes,\" \"clothes,\" or \"hair care.\"");
+				input = scan1.nextLine();
+			}
+
+			Catalog.printItemsList(itemsList, input);
 
 			Catalog.placeOrder2(itemsList, scan1, Catalog.ItemNum);
-
-			System.out.println("Do you want to look at another department?");
-
+			
+			System.out.println("Do you want to continue shopping?");
+			
 			choice = scan1.nextLine();
 
-			// scan1.close();
 		}
 
+		if (choice.equalsIgnoreCase("no")) {
 		Checkout ckout = new Checkout();
 		ckout.paymentInfo();
+		
+		}
 
 	}
 }
-// }
