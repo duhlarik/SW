@@ -2,11 +2,11 @@ Shoes,Madeline,45.00,101,Yellow pump with gold accents
 Shoes,Lydia,35.00,102,Red ballet flat
 Shoes,Star,125.00,103,Sparkly single-sole strappy sandel
 Shoes,Aija,75.00,104,High heeled zipper high-top tennis shoe
-Clothes, Blouse, 35.00, 105, Burgundy floral print
-Clothes, Pencil skirt, 75.00, 106, Black midi pencil skirt
-Clothes, Trousers, 75.00, 107, Houndsthooth trousers
-Clothes, Dress, 100.00, 108, Little black dress
-Hair Care, 2 N 1 Shampoo and Conditioner, 12.00, 109, All in one shampoo & conditioner
-Hair Care, Conditioning Cleanser, 12.00, 110, Super hydrating conditioning cleanser
-Hair Care, Conditioning Nectar, 12.00, 111, A humectant enriched rinse out conditioner
-Hair Care, Edge Control Balm, 12.00, 112, Moisturizing and softening edge control balm
+Clothes,Blouse,35.00,105,Burgundy floral print
+Clothes,Pencilskirt,75.00,106,Black midi pencil skirt
+Clothes,Trousers,75.00,107,Houndsthooth trousers
+Clothes,Dress,100.00,108,Little black dress
+Hair Care,2 N 1 Shampoo and Conditioner,12.00,109,All in one shampoo & conditioner
+Hair Care,Conditioning Cleanser,12.00,110,Super hydrating conditioning cleanser
+Hair Care,Conditioning Nectar,12.00,111,A humectant enriched rinse out conditioner
+Hair Care,Edge Control Balm,12.00,112, Moisturizing and softening edge control balm
