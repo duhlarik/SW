@@ -90,7 +90,7 @@ public class Checkout {
 		Catalog sTotal = new Catalog();
 		double totalTax = sTotal.getSubTotal() * tax;
 		double grandTotal = totalTax + sTotal.getSubTotal();
-		System.out.println("\nSubtotal: $" + sTotal.getSubTotal());
+		System.out.println("\nSubtotal: $" + df.format(sTotal.getSubTotal()));
 		System.out.println();
 		System.out.println("Tax due: $" + df.format(totalTax));
 		System.out.println();
@@ -101,7 +101,6 @@ public class Checkout {
 		String payType = scan1.nextLine();
 
 		if (payType.equalsIgnoreCase("cash")) {
-			// cash(grandTotal);
 			System.out.println("Cash tendered? ");
 			cashTendered = scan1.nextDouble();
 			cashChange = cashTendered - grandTotal;
@@ -120,23 +119,5 @@ public class Checkout {
 			System.out.println("Please enter the expiration date: ");
 			expDate = scan1.next();
 		}
-
 	}
-
-/*	public double figureTax(double subTotal) {
-		double tax = 0.06;
-		double grandTotal = subTotal * tax;
-		return grandTotal;
-
-	}
-
-	public double cash(double grandTotal) {
-		//not being called
-		Scanner scan1 = new Scanner(System.in);
-		System.out.println("Cash tendered? ");
-		cashTendered = scan1.nextDouble();
-		cashChange = cashTendered - grandTotal;
-		return cashChange;
-	}*/
-
 }

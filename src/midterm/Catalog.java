@@ -67,7 +67,7 @@ public class Catalog {
 
 		double extendedPrice = quantity * price;
 
-		System.out.println("Your subtotal is $" + df.format(extendedPrice));
+		System.out.println("Your subtotal is $" + df.format(extendedPrice) + "\n");
 
 		subTotal += extendedPrice;
 

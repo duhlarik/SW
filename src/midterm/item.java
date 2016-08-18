@@ -60,7 +60,4 @@ public class item {
 	public void setItemNum(String itemNum) {
 		this.itemNum = itemNum;
 	}
-
-	
-
 }
