@@ -9,4 +9,4 @@ Clothes,Dress,100.00,108,Little black dress
 Hair Care,2 N 1 Shampoo and Conditioner,12.00,109,All in one shampoo & conditioner
 Hair Care,Conditioning Cleanser,12.00,110,Super hydrating conditioning cleanser
 Hair Care,Conditioning Nectar,12.00,111,A humectant enriched rinse out conditioner
-Hair Care,Edge Control Balm,12.00,112, Moisturizing and softening edge control balm
+Hair Care,Edge Control Balm,12.00,112,Moisturizing and softening edge control balm
